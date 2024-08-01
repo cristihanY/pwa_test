@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Cambia esto a la rama que deseas desplegar
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.16.0'  # Puedes cambiar la versión de Node.js según tus necesidades
+
+    - name: Build the site
+      run: |
+        # Aquí puedes agregar comandos de construcción si tu sitio necesita ser construido
+        # Por ejemplo, si usas una herramienta de construcción como Jekyll o Hugo, o simplemente si usas `npm` para construir
+        npm install
+        npm run build  # Reemplaza con el comando adecuado para tu proyecto
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: ./dist
