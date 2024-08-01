@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Despliega cuando haya un push a la rama main nuevo
+      - main  # Despliega cuando haya un push a la rama main nuevo ajuste
 
 jobs:
   deploy:
