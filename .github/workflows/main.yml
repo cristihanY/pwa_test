@@ -18,11 +18,6 @@ jobs:
         npm install
         npm run build  # Reemplaza con el comando de construcción adecuado
 
-    - name: List files in build directory
-      run: ls -R ./dist/my-app/browser  # Verifica la estructura de directorios
-
-    - name: Add .nojekyll file
-      run: echo > ./dist/my-app/browser/.nojekyll  # Ajusta la ruta si es necesario
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
