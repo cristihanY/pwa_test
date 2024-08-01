@@ -19,9 +19,6 @@ jobs:
     - name: Build the site
       run: npm run build  # Asegúrate de que este comando construya la aplicación correctamente
 
-    - name: Add .nojekyll file
-      run: echo > ./dist/my_app/browser/.nojekyll  # Asegúrate de que la ruta sea correcta
-
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
