@@ -23,6 +23,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist/my_app/browser  # Ajusta esta ruta si es necesario app
+        publish_dir: ./dist/my_app/browser  # Ajusta esta ruta si es necesario appb
         publish_branch: gh-pages 
 
